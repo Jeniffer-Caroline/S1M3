@@ -8,6 +8,14 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "acao_sustentavel", uniqueConstraints = @UniqueConstraint(columnNames = "titulo"))
 public class AcaoSustentavel {
+    public AcaoSustentavel() {
+    }
+    public AcaoSustentavel(String titulo, String descricao, LocalDate dataRealizacao){
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.dataRealizacao = dataRealizacao;
+    }
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
